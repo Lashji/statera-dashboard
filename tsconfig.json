@@ -11,8 +11,22 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./scripts",
+    "./test",
+    "./typechain"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "files": ["./hardhat.config.ts"]
 }
+// HARDHAT DEFAULT CONFIG
+// "target": "es2018",
+// "module": "commonjs",
